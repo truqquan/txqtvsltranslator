@@ -1,21 +1,21 @@
 import streamlit as st
-# import tensorflow as tf
+import tensorflow as tf
 from PIL import Image
-# from tensorflow import keras
+from tensorflow import keras
 import os
 import pandas as pd
 import numpy as np
-# from sklearn.model_selection import train_test_split
-# from sklearn.preprocessing import LabelEncoder
-# from sklearn.preprocessing import OneHotEncoder
-# import subprocess
-# from collections import OrderedDict
-# import paramiko
-# import shutil
-# import threading
-# import time
-# import speech_recognition as sr
-# from moviepy.editor import VideoFileClip, concatenate_videoclips
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
+import subprocess
+from collections import OrderedDict
+import paramiko
+import shutil
+import threading
+import time
+import speech_recognition as sr
+from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 def combine_videos_vn(video_paths, output_path):
     video_clips = []
@@ -291,7 +291,7 @@ def run_code_on_pi2():
 
 
 with st.sidebar: 
-    image = Image.open(r"C:\Users\ACER\Downloads\TIN_HOC_TRE_THPT_TXQT\Streamlit\hand.png")
+    image = Image.open("hand.png")
     st.image(image)
     st.title("Thiết bị chuyển ngữ hỗ trợ người câm điếc trong giao tiếp")
     choice = st.radio("Tùy chọn", ["Giới thiệu","Chuyển đổi cử chỉ","Chuyển đổi giọng nói","Thu thập cử chỉ","Huấn luyện mô hình","Backup"])
@@ -299,12 +299,12 @@ with st.sidebar:
 if choice == "Giới thiệu":
     st.info("Dự án tham gia Hội thi Tin học trẻ toàn quốc lần thứ XXX năm 2024.")
     st.info("Tác giả: Cao Trung Quân Lớp 11A1 Trường THPT Thị xã Quảng Trị.")
-    image = Image.open(r"C:\Users\ACER\Downloads\TIN_HOC_TRE_THPT_TXQT\Streamlit\handsign.jpg")
+    image = Image.open("handsign.jpg")
     st.image(image)
 
 if choice == "Chuyển đổi cử chỉ":
     st.title("Chuyển đổi cử chỉ")
-    image = Image.open(r"C:\Users\ACER\Downloads\TIN_HOC_TRE_THPT_TXQT\Streamlit\handsign_convert.png")
+    image = Image.open("handsign_convert.png")
     st.image(image)
     if st.button("Vietnamese"):
         run_code_on_pi1()
@@ -313,7 +313,7 @@ if choice == "Chuyển đổi cử chỉ":
 
 if choice == "Chuyển đổi giọng nói":
     st.title("Chuyển đổi giọng nói")
-    image = Image.open(r"C:\Users\ACER\Downloads\TIN_HOC_TRE_THPT_TXQT\Streamlit\speech_convert.png")
+    image = Image.open("speech_convert.png")
     st.image(image)
 
     if st.button("Vietnamese"):
