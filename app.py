@@ -1,21 +1,21 @@
 import streamlit as st
-import tensorflow as tf
+# import tensorflow as tf
 from PIL import Image
-from tensorflow import keras
+# from tensorflow import keras
 import os
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import OneHotEncoder
-import subprocess
-from collections import OrderedDict
-import paramiko
-import shutil
-import threading
-import time
-import speech_recognition as sr
-from moviepy.editor import VideoFileClip, concatenate_videoclips
+# from sklearn.model_selection import train_test_split
+# from sklearn.preprocessing import LabelEncoder
+# from sklearn.preprocessing import OneHotEncoder
+# import subprocess
+# from collections import OrderedDict
+# import paramiko
+# import shutil
+# import threading
+# import time
+# import speech_recognition as sr
+# from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 def combine_videos_vn(video_paths, output_path):
     video_clips = []
