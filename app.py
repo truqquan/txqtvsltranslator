@@ -317,33 +317,33 @@ if choice == "Chuyển đổi giọng nói":
     st.image(image)
 
     if st.button("Vietnamese"):
-        dict_file = "nlp/vietnamese/vietnamese_dict.txt"
-        dict = {}
+        # dict_file = "nlp/vietnamese/vietnamese_dict.txt"
+        # dict = {}
 
-        with open(dict_file, "r", encoding="utf-8") as file:
-            for line in file:
-                line = line.strip()
-                if line:
-                    key, value = line.split(":")
-                    dict[key.strip()] = int(value.strip())
-        print(dict)
+        # with open(dict_file, "r", encoding="utf-8") as file:
+        #     for line in file:
+        #         line = line.strip()
+        #         if line:
+        #             key, value = line.split(":")
+        #             dict[key.strip()] = int(value.strip())
+        # print(dict)
 
-        video_paths = []
-        output_path = "nlp/vietnamese/combined_video.mp4"
+        # video_paths = []
+        # output_path = "nlp/vietnamese/combined_video.mp4"
 
         text = speech_to_text_vn()
-        string1 = text.lower()
-        print(string1)
-        tokennizer(string1, dict)
+        # string1 = text.lower()
+        # print(string1)
+        # tokennizer(string1, dict)
 
-        print(video_paths)
-        combine_videos_vn(video_paths, output_path)
+        # print(video_paths)
+        # combine_videos_vn(video_paths, output_path)
 
         st.title("Giọng nói thành ký tự:")
         st.write(text)
 
-        st.title("Giọng nói thành cử chỉ:")
-        st.video("nlp/vietnamese/combined_video.mp4")
+        # st.title("Giọng nói thành cử chỉ:")
+        # st.video("nlp/vietnamese/combined_video.mp4")
 
     elif st.button("English"):
         dict_file = "nlp/english/english_dict.txt"
